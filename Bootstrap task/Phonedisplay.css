@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    color: aliceblue;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+header{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(62, 184, 255);
+    box-shadow: 0px 3px 15px rgb(62, 184, 255);
+    justify-content: center;
+    padding: 20px;
+   
+}
+header img{
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    border: 2px solid rgb(255, 230, 0) ;
+  
+
+}
+.container img{
+    width : 200px;
+    height: 200px;
+}
+.myborder{
+    border: 2px solid rgb(62, 184, 255);
+    margin: 5px;
+    width: 204px;
+    padding-left: 0px;
+}
+.mar{
+    overflow: visible;
+}
