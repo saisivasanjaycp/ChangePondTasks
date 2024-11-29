@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <title>Car Toggles</title>
+      <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-section, .right-section {
+            border: 2px solid #dee2e6;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1;
+            margin: 10px;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .car-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #495057;
+        }
+
+        .btn-toggle, .btn-car {
+            margin: 5px;
+        }
+
+        .btn-car-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            
+        }
+        .btn-car-group :hover{
+            background-color: darkviolet;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img id="carImage" src="/Assets/Images/Mustang.jpg" alt="Mustang">
+            <div class="car-name" id="carName">Mustang</div>
+            <button class="btn btn-primary btn-toggle" onclick="toggleImage()">Change Car</button>
+        </div>
+
+       
+        <div class="right-section">
+            <img id="fixedCarImage" src="/Assets/Images/Ferrari.jpg" alt="Ferrari">
+            <div class="car-name" id="fixedCarName">Ferrari</div>
+            <div class="btn-car-group">
+                <button class="btn btn-primary btn-car" onclick="setCar('Ferrari', '/Assets/Images/ferrari.jpg')">Ferrari</button>
+                <button class="btn btn-primary btn-car" onclick="setCar('Mustang', '/Assets/Images/Mustang.jpg')">Mustang</button>
+                <button class="btn btn-primary btn-car" onclick="setCar('Maserati', '/Assets/Images/maserati.jpg')">Maserati</button>
+                <button class="btn btn-primary btn-car" onclick="setCar('Mercedes', '/Assets/Images/hamilton.jpg')">Mercedes</button>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+       
+        const carNames = ["Mustang", "Maserati", "Mercedes", "Red Bull"];
+        const carImages = [
+            "/Assets/Images/Mustang.jpg",
+            "/Assets/Images/maserati.jpg",
+            "/Assets/Images/hamilton.jpg",
+            "/Assets/Images/redbull.jpg"
+        ];
+
+        let currentIndex = 0;
+
+        function toggleImage() {
+            currentIndex++;
+            if (currentIndex === carImages.length) {
+                currentIndex = 0;
+            }
+            document.getElementById("carImage").src = carImages[currentIndex];
+            document.getElementById("carImage").alt = carNames[currentIndex];
+            document.getElementById("carName").textContent = carNames[currentIndex];
+        }
+
+        // For the right section fixed buttons
+        function setCar(name, imagePath) {
+            document.getElementById("fixedCarImage").src = imagePath;
+            document.getElementById("fixedCarImage").alt = name;
+            document.getElementById("fixedCarName").textContent = name;
+        }
+    </script>
+</body>
+</html>
