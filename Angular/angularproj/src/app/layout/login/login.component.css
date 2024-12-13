@@ -1,0 +1,89 @@
+/* Login Container */
+.container {
+    width: 400px; /* Fixed width */
+    margin: 100px auto; /* Center the container */
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #e73856); /* Vibrant gradient background */
+    box-shadow: 
+      0 10px 15px rgba(0, 0, 0, 0.3), 
+      0 0 20px rgba(255, 56, 128, 0.7); /* Outer glow */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Heading inside the container */
+  .container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff; /* White heading */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 
+      0 2px 4px rgba(0, 0, 0, 0.4), 
+      0 0 10px rgba(255, 255, 255, 0.7); /* Glowing text effect */
+  }
+  
+  /* Input fields inside the form */
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 2px solid #ffffff; /* Light border for input */
+    background: rgba(255, 255, 255, 0.2); /* Transparent white input background */
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 
+      inset 0 1px 3px rgba(0, 0, 0, 0.1), 
+      0 0 10px rgba(255, 255, 255, 0.3); /* Subtle inner glow */
+    transition: all 0.3s ease;
+  }
+  
+  /* Input hover and focus effects */
+ form input[type="text"]:focus,
+ form input[type="password"]:focus {
+    box-shadow: 
+      inset 0 2px 5px rgba(0, 0, 0, 0.2), 
+      0 0 15px rgba(255, 255, 255, 0.6); /* Glow effect on focus */
+    border-color: rgba(255, 255, 255, 0.8); /* Enhanced border on focus */
+  }
+  
+  /* Button style */
+  form button {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #ff5f6d, #ffc371); /* Vibrant gradient button */
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 
+      0 4px 10px rgba(0, 0, 0, 0.3), 
+      0 0 15px rgba(255, 111, 173, 0.8); /* Button glow */
+    transition: all 0.3s ease;
+  }
+  
+  /* Button hover effect */
+  form button:hover {
+    transform: scale(1.05);
+    box-shadow: 
+      0 6px 15px rgba(0, 0, 0, 0.4), 
+      0 0 20px rgba(255, 111, 173, 1); /* Enhanced glow on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .container {
+      width: 90%;
+    }
+  }
+  

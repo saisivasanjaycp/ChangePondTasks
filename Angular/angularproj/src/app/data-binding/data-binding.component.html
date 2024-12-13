@@ -1,0 +1,13 @@
+<p>data-binding works!</p>
+
+<!-- adding img  -->
+<img src="./Images/Ferrari.jpg" alt="Ferrari" style="width: 400px; height: 250px;">
+
+<!--1.interopolation -->
+<h1>{{myName}}</h1>
+
+<!-- 2.property Binding  -->
+<img [src]="myImg" [alt]="imgalt" style="width: 400px; height: 250px;"><br>
+
+<!-- 3. event Binding -->
+ <button type="button" (click)="greeting('Sanjay')">Click Here</button>

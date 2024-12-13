@@ -1,0 +1,219 @@
+11/12/24
+
+ANGULAR :
+
+-- Angular is a TypeScript-based(advanced version of javascript) open-source web application framework developed and maintained by Google
+-- It is a platform for building single-page client applications using HTML and TypeScript.
+-- Angular provides a comprehensive solution for web development, offering tools, libraries, and powerful 
+   features for building dynamic, robust, and scalable applications.
+
+When to Use React or Angular?
+Use React if:
+-----------------
+--You want flexibility and control over libraries and tools.
+--Your project is focused on dynamic and interactive UI.
+--You prefer simplicity and faster performance for small to medium-scale apps.
+
+Use Angular if:
+-----------------
+--You want a comprehensive framework with built-in tools.
+--Your project is enterprise-grade with complex requirements.
+--You prefer strong typing and structured coding practices.
+
+Pre- requiste Software Check
+----------------------------------
+==> nodejs = node --version
+==> TypeScript = -ts 
+==> Angular = -angular
+
+
+How to create and install Angular
+--------------------------------------
+==> ng --version                 //display version of angualr
+==> npm install -g @angular/cli  // it will create angular project
+==> ng new projectName           // create name for angular project
+
+Angular Work on component
+---------------------------
+component -- It is partial part of angular project
+          -- it contain code for angular project.
+          -- it can be any part of project,which  we can use multiple time
+          -- in angular root component name is app           
+
+How to create component in angular
+----------------------------------
+==> ng -g c componentName  (or)  ng generate componentname    
+
+when we crate componet in angualr it generate four file
+    1. HTML
+    2. css
+    3. TypeScript
+    4. spec.ts 
+
+creating components
+-------------------
+ng g c databinding
+ng g c directive
+
+How to get output of individual component
+---------------------------------------------
+-- Go to component ts file and copy its selector name and write as tag where you want
+
+databinding
+-------------
+-- Getting or accessing data from one file to another file in same component
+    1. interpolation{{}}: it send data from ts file ==> html file
+    2. Property binding(): in this we set attribute (property) value ts ==> html
+    3. event binding (): in this we sent data from html => ts file
+    4. two-way databinding [()]= in this we can send data from ts to html
+                            -- to perfrom two-way databinding we have ng model directory but ngmodel directive
+                             is not part of core angular module it is part formsmodule, for this first we have 
+                             to import form module in app.ts file import array.ts file in import array.
+
+
+Directive in angular :
+-----------------------
+-- it is used to change appearance and behaviour as well as perform DOM manipulation in angular
+-- there are three types of directives in angular
+    1. Structural directive -- it is used to perform DOM manipulation in angular
+                            -- Structural directive denoted by *
+                            -- Structural directive are *ngIf, *ngFor, *ngSwitchCase
+                            -- we can apply one directive at a time to single element
+                            -- it is part of common module for this we have to import commonModule in component
+             ng-template -- display out on the basis of condition
+                         -- to create reference variable in angular we use #
+                
+    2. attribute directive --it is use to cahnge appearance and behaviour of DOM
+                  -ngStyle-- it is used to apply css style property on the basic of condition
+                  -ngClass-- it is used to apply css class on the basis of condition
+                  -ngModel-- it is use to perform two-way binding
+
+    3. custom directive -- the directive created by developer 
+                        ==> ng g directive directivename
+
+Component interaction:
+-------------------------
+accessing data from parent componentto child component
+- Input() decorator: it is use to send data from parent component to child component
+- output() decorator : it is use to send data from child component to parent component  
+
+pipes:
+----------
+--it is use to  transform property value without changing its original value
+--it is denoted by | single
+--there are three types of pipe in angular
+         1. Inbuilt pipe : pipe provided by angular
+         2. Custom pipe : pipe create by developer for particular use
+         3. third pipe : pipes already devloped by third party vender, first we have to install it and use it
+
+How to install bootstrap in angular
+----------------------------------
+==> npm i bootstrap 
+==> go to angular.json file and in its style array  import its path
+==> restart angular project
+
+
+Layout Folder 
+---------------------
+nav,pagenotfound,maindashboard,footer,login
+
+Form Folder
+-------------------
+ angform,utdf,rtf    
+
+ Routing in angular
+ ---------------------
+ - navigation of component
+ - to display component output or navigating component by using routing in angular for it we write code
+   in app.routes.ts.file
+
+1. naming routing
+2. default routing
+3. redirect routing
+4. parametrize routing
+5. child routing
+6. wildcard routing
+   
+=================================================================================================================
+12/12/24
+
+How to navigate in angular:
+--to perform component navigating we have to use routerlink property with anchor tag, 
+but first we have to import routerlink in component ts file form "@react/router" library.
+
+
+ANGULAR FORM 
+--there are two types of forms 
+
+1. UTFD ==> User template Deriven Form
+    -- when we have to create simple form validation in that case we use it
+    --to perform validation we have to use ngmodel directory with input element
+    --int this ng form directory will hold data of all input element in it
+    --in utdf form validation code reside in html file
+
+2.RTF ==> Reactive template Form
+    --when we have to write complex logic to perform form validation in that case we use it 
+    --to use rtf form validation first we have to import reactiveformmodule from FormsModule in component
+    --in this mainly two classes
+            1. form group==>it will hold information of all input element
+            2. formcontrol==>it will hold information of individual input element
+
+Service in Angular
+-----------------
+--in angular service is special class with extra powser
+--it is use for multiple users 
+    1. to share data with multiple component
+    2.we can implement business logic in it
+    3.we can perform external communication(database connection)
+
+How to create Service
+------------------------
+ng g service serviceName
+ng g service shared/services/itemservices
+
+how to access data from service into angular component
+-----------------------------------------------------
+-- if you want to service data into angular for this first we have to import service in 
+    component ts file and create instance of service class 
+
+
+REST FAEKE API 
+-----------------
+-CRUD
+
+cd src/app/shared/database
+json-server --watch -p -8888 db.json
+
+how to make api reaquest from angular to services
+------------------------------------------------------
+-- to send requests from angular service to server for this we have create instance of HTTPclient class 
+in service constructor, but HttpClient class in not part of HttpClientModule, s
+o first we have to import HttpClientModule module.
+
+so we have to import HttpClientModule.
+
+ng g c crud/Productdash
+ng g c crud/Productadd
+ng g c crud/Productedit
+*Consurrent Library:
+"json-server" : "cd src/app/shared/database && npx json-server --watch -p 8888 db.json"
+"start-dev" : "npx concurrently \"ng serve -o\"\"npm run json-server\"",
+
+
+
+*guard : inangular guard is used to prevent rendering of routing compnent.
+        -it return boolean value wither trur or false
+        -if it return true then component will render otherwise not
+
+    => ng g guard guardname
+
+
+http-anular-server
+npm isntall -g angular-http-server
+
+
+*testing in angular
+ng test
+
+    
+      

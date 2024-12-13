@@ -1,0 +1,25 @@
+<p>multipleimage works!</p>
+<div class="image-container">
+    <!-- First fixed image -->
+    <img [src]="images[0].path" alt="{{ images[0].name }}" class="fixed-image">
+    <div class="image-name">{{ images[0].name }}</div>
+  
+    <!-- Display the selected image -->
+    <img [src]="images[selectedImageIndex].path" alt="{{ images[selectedImageIndex].name }}" class="selected-image">
+    <div class="image-name">{{ images[selectedImageIndex].name }}</div>
+  
+    <!-- Buttons for each image -->
+    <div class="button-group">
+      <button
+        *ngFor="let image of images; let i = index"
+        (click)="showImage(i)"
+        [class.active]="i === selectedImageIndex"
+        class="image-button"
+      >
+        {{ image.name }}
+      </button>
+    </div>
+  </div>
+  
+
+

@@ -1,0 +1,59 @@
+{
+  "products": [
+    {
+      "id": "a857",
+      "pname": "laptop",
+      "pprice": "85000",
+      "company": "Asus",
+      "pquantity": "6"
+    },
+    {
+      "pname": "mouse",
+      "pprice": "2000 ",
+      "company": "dell",
+      "pquantity": "20",
+      "id": "1e71"
+    },
+    {
+      "pname": "keyboard cells",
+      "pprice": "3000",
+      "company": "dell",
+      "pquantity": "5",
+      "id": "1b1b"
+    },
+    {
+      "pname": "pc cabinet",
+      "pprice": "20000",
+      "company": "Antsports",
+      "pquantity": "20",
+      "id": "ae13"
+    }
+  ],
+  "users": [
+    {
+      "id": "001",
+      "userId": "admin@gmail.com",
+      "userpass": "1234"
+    },
+    {
+      "id": "002",
+      "userId": "sanjay@gmail.com",
+      "userpass": "1234"
+    },
+    {
+      "id": "003",
+      "userId": "deva@gmail.com",
+      "userpass": "nathan@123"
+    },
+    {
+      "id": "004",
+      "userId": "kishore@gmail.com",
+      "userpass": "kishh@123"
+    },
+    {
+      "id": "005",
+      "userId": "santoz@gmail.com",
+      "userpass": "santy@123"
+    }
+  ]
+}

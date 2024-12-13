@@ -1,0 +1,16 @@
+<h1 style="margin-left: 40%;">Toggle Image Task</h1>
+
+<div class="image-container">
+   
+    <img [src]="images[imgIndex].path" alt="Toggle Image" class="toggle-image">
+  
+   
+    <div class="image-name">
+        <strong>{{ images[imgIndex].name }}</strong>
+    </div>
+  
+    
+    <button (click)="toggleImage()" class="toggle-button">Toggle Image</button>
+  </div>
+  
+  

@@ -1,0 +1,47 @@
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+  }
+  
+  .toggle-image {
+    width: 600px;
+    height: 350px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .image-name {
+        font-size: 18px;
+        color: #f80c0c;
+        margin: 10px 0;
+        font-weight: bold;
+  }
+  
+  .toggle-button {
+    
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+  }
+  
+  .toggle-button:hover {
+    background-color: #f5492b;
+  }
+  
+  .toggle-button {
+    margin-top: 10px;
+  }
+  

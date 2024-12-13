@@ -1,0 +1,26 @@
+<a routerLink="/maindashboard/productadd"><button type="button"  class="btn btn-warning">Add Data</button></a>
+<table class="table table-bordered border-black mt-2 table-info">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Product name</th>
+            <th>Product price</th>
+            <th>Comapany</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let prod of productArray">
+        <td>{{prod.id}}</td>
+        <td>{{prod.pname}}</td>
+        <td>{{prod.pprice}}</td>
+        <td>{{prod.company}}</td>
+        <td>{{prod.pquantity}}</td>
+        <td>
+            <a href="" [routerLink]="['/maindashboard//productedit',prod.id]" class="btn btn-success">Edit</a>&nbsp;
+            <button type="button" (click)="deleteData(prod.id)" class="btn btn-danger">Delete</button>
+        </td>
+        </tr>
+    </tbody>
+</table>

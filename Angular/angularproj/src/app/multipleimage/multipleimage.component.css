@@ -1,0 +1,48 @@
+.image-container {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+  }
+  
+  .fixed-image, .selected-image {
+    width: 300px;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .image-name {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .image-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .image-button.active {
+    background-color: #0056b3;
+  }
+  
+  .image-button:hover {
+    background-color: #0056b3;
+  }
+  
